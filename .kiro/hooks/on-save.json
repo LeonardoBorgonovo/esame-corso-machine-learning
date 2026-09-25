@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "On save",
+      "trigger": "PostFileSave",
+      "action": {
+        "type": "agent",
+        "prompt": "Quando salvo un file Python in services/, identifica a quale servizio appartiene ed esegui i relativi test unitari con pytest"
+      },
+      "matcher": ".*services/.*\\.py$",
+      "enabled": true
+    }
+  ]
+}
